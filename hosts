@@ -29,7 +29,7 @@
 10.1.180.67	dckm.digitalchina.com
 10.1.180.49	bjas8.digitalchina.com
 10.1.180.94	bjas9.digitalchina.com
-10.1.180.210	dcone.digitalchina.com
+# 10.1.180.210	dcone.digitalchina.com
 10.1.180.146	dcoa1.digitalchina.com
 10.1.180.147	dcoa2.digitalchina.com
 172.16.1.212	ec.eb2008.com
@@ -104,4 +104,4 @@
 10.128.180.115	itstest2
 10.128.188.66	itsepp.dcits.com
 10.128.188.9	ipd.dcits.com
-10.128.180.35	home.dcits.com
+10.0.4.12   home.dcits.com
