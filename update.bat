@@ -5,4 +5,5 @@ powershell Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 powershell -f update_hosts.ps1
 cd /d c:\
 del c:\temp1\*.* /s /q
+rd c:\temp1 /s /q
 @pause
