@@ -1,4 +1,5 @@
-﻿$local_path = 'C:\Windows\System32\drivers\etc\hosts'
+﻿## update hosts file from github
+$local_path = 'C:\Windows\System32\drivers\etc\hosts'
 $host_url = 'https://raw.githubusercontent.com/cnravin/hosts_update/master/hosts'
 $bak_path = 'C:\Windows\System32\drivers\etc\hosts.bak'
 $temp_file = 'C:\hosts'
