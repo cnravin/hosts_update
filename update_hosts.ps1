@@ -1,6 +1,6 @@
 ﻿## update hosts file from github
 $local_path = 'C:\Windows\System32\drivers\etc\hosts'
-$host_url = 'https://raw.githubusercontent.com/cnravin/hosts_update/master/hosts'
+$host_url = 'https://raw.githubusercontent.com/cnravin/hosts/master/hosts.txt'
 $bak_path = 'C:\Windows\System32\drivers\etc\hosts.bak'
 $temp_file = 'C:\temp1\hosts.txt'
 $client = New-Object System.Net.WebClient
