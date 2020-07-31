@@ -5,7 +5,7 @@ import os
 import shutil
 
 HOST_URL = 'http://10.0.2.96/hosts'
-# HOST_URL = 'https://raw.githubusercontent.com/cnravin/hosts_update/master/hosts'
+# HOST_URL = 'https://raw.githubusercontent.com/cnravin/hosts/master/hosts.txt'
 LOCAL_PATH = r'C:\Windows\System32\drivers\etc\hosts'
 
 
