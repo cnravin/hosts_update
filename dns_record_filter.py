@@ -12,7 +12,7 @@ with open('domain_list.txt', encoding='utf-8') as f:
         domain_list.append(each_line)
 
 dns_record = dict.fromkeys(domain_list)
-dc_dns = ['10.1.120.241']
+dc_dns = ['10.1.120.241', '10.1.124.241']
 # print(dns_record)
 
 for a in dns_record:
