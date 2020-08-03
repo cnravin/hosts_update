@@ -1,6 +1,8 @@
 # -*- coding:utf-8 -*-
 import datetime
+import sys
 import dns.resolver
+import push_hosts_update
 
 
 with open('domain_list.txt', encoding='utf-8') as f:
@@ -29,16 +31,25 @@ for a in dns_record:
 # print(dns_record)
 hosts_text = []
 update_time = datetime.datetime.now()
+
 for each in dns_record:
-    host_line = '{}\t{}\n'.format(dns_record[each],each)
+    host_line = '{}\t{}\n'.format(dns_record[each], each)
     # print(host_line)
     hosts_text.append(host_line)
 
+if sys.platform == 'win32':
+    file_path = r'E:\py_project\hosts\hosts.txt'
+else:
+    file_path = '/opt/hosts/hosts.txt'
+
 try:
-    with open(r'D:\py_project\hosts\hosts.txt','w') as hostfile: # 替换hosts文件存放的实际路径
+    with open(file_path, 'w') as host_file:     # 替换hosts文件存放的实际路径
         hosts_text.insert(0, '# {}\n'.format(update_time))  # 行首插入时间戳
-        hostfile.writelines(hosts_text)
-        hostfile.close()
+        host_file.writelines(hosts_text)
+        host_file.close()
 
 except OSError as reason:
     print('写入文件报错：%s' % reason)
+
+# push update to git
+push_hosts_update.push_hosts()
