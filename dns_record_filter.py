@@ -1,6 +1,5 @@
 # -*- coding:utf-8 -*-
-import sys
-
+import datetime
 import dns.resolver
 
 
@@ -26,13 +25,15 @@ for a in dns_record:
 
 # print(dns_record)
 hosts_text = []
+update_time = datetime.datetime.now()
 for each in dns_record:
     host_line = '{}\t{}\n'.format(dns_record[each],each)
     # print(host_line)
     hosts_text.append(host_line)
 
 try:
-    with open('D:\\hosts','w') as hostfile: # 替换hosts文件存放的实际路径
+    with open(r'D:\py_project\hosts\hosts.txt','w') as hostfile: # 替换hosts文件存放的实际路径
+        hosts_text.insert(0, '# {}\n'.format(update_time))  # 行首插入时间戳
         hostfile.writelines(hosts_text)
         hostfile.close()
 
