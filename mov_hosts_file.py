@@ -25,7 +25,7 @@ def mov_file():
         else:
             shutil.copyfile(dst_path[i], dst_path[i] + '.bak')
 
-        shutil.move(src_path[i], dst_path[i])
+        shutil.copyfile(src_path[i], dst_path[i])
         i += 1
 
 
