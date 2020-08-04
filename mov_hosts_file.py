@@ -7,9 +7,9 @@ src_path = ['/opt/hosts_update/local_update/update_hosts_local.ps1',
             '/opt/hosts_update/local_update/update_local.bat',
             '/opt/hosts_update/local_update/update_local.py',
             '/opt/hosts/hosts.txt']
-dst_path = ['/opt/hosts_update/local_update/update_hosts_local.ps1',
-            '/opt/hosts_update/local_update/update_local.bat',
-            '/opt/hosts_update/local_update/update_local.py',
+dst_path = ['/usr/share/nginx/www/dcit/hosts/update_hosts_local.ps1',
+            '/usr/share/nginx/www/dcit/hosts/update_local.bat',
+            '/usr/share/nginx/www/dcit/hosts/update_local.py',
             '/usr/share/nginx/www/dcit/hosts/hosts.txt']
 
 # LOCAL_PATH = '/opt/hosts/hosts.txt'
