@@ -17,7 +17,6 @@ def push_hosts():
         host_path = '/opt/hosts'
 
     os.chdir(host_path)
-    os.system('git pull')
     os.system('git add hosts.txt')
     os.system('git commit -m "update host {}"'.format(time.strftime('%Y-%m-%d %H:%M:%S')))
     time.sleep(5)
