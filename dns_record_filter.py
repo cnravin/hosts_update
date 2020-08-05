@@ -1,13 +1,23 @@
 # -*- coding:utf-8 -*-
 import datetime
-import sys
+import sys, os
 import dns.resolver
 import push_hosts_update
 
 
 def host_record_update():
+    folder_path = os.path.abspath(sys.argv[0])
+    if sys.platform == 'win32':
+        p = folder_path.rfind('\\')
+        domain_list_path = folder_path[:p + 1] + 'domain_list.txt'
+        print(domain_list_path)
 
-    with open('domain_list.txt', encoding='utf-8') as f:
+    else:
+        p = folder_path.rfind('/')
+        domain_list_path = folder_path[:p + 1] + 'domain_list.txt'
+        print(domain_list_path)
+
+    with open(domain_list_path, encoding='utf-8') as f:
         domain_list = []
         for each_line in f:
             p = each_line.rfind('com')
@@ -40,7 +50,7 @@ def host_record_update():
         hosts_text.append(host_line)
 
     if sys.platform == 'win32':
-        file_path = r'E:\py_project\hosts\hosts.txt'
+        file_path = r'D:\py_project\hosts\hosts.txt'
     else:
         file_path = '/opt/hosts/hosts.txt'
 
